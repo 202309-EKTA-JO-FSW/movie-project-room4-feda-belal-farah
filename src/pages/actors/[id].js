@@ -1,4 +1,4 @@
-import actorinfo from './actorinfo'
+import actorinfo from './Body'
 
 const POST_URL = 'https://api.themoviedb.org/3/person/popular?language=en-US&page=1'
 
