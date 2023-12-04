@@ -44,7 +44,7 @@ function Search() {
   }, []);
 
   return (
-    <form className='w-[500px] relative'>
+    <form>
       <input
         type="text"
         onInput={handleChange}
@@ -54,23 +54,23 @@ function Search() {
       <FontAwesomeIcon icon={faSearch} className='search-icon' />
       <div className='movie-search' >
         {movieFilter.map((movie) => (
-          <div key={movie.id}>
+          <div key={movie.id} className='moviee'>
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.original_title}
               className='movie-poster'
             />
-            <h3>{movie.original_title}</h3>
+            <h2 className='movie-title'>{movie.original_title}</h2>
           </div>
         ))}
         {actorFilter.map((actor) => (
-          <div key={actor.id}>
+          <div key={actor.id} className='actorr'>
             <img
               src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
               alt={actor.original_name}
               className='movie-poster'
             />
-            <h3>{actor.original_name}</h3>
+            <h3 className='actor-name'>{actor.original_name}</h3>
           </div>
         ))}
       </div>

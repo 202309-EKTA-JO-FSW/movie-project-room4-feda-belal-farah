@@ -14,7 +14,6 @@
 }
 
 body {
-  font-family: 'poppins',sans-serif;
   
 }
 
@@ -26,8 +25,10 @@ nav{
   align-content: center;
   height: 80px;
   margin-left: 0;
-  background-color: #E6E6E6;
-  border-radius: 5px;
+  background-color: #5C8374;
+  color: #040D12;
+  position: sticky;
+  top: 0;
   
 }
 .search-icon{
@@ -36,21 +37,26 @@ nav{
   cursor: pointer;
 }
 .searchBox{
- border-radius: 10px;
- box-shadow: 0 0 5px;
+ border-radius: 5px;
+ box-shadow: 0 0 10px;
  margin-top: 8px;
  padding: 1px;
+ margin-left: 30px;
+ width: 350px;
 }
 
 .searchBox:focus{
-  border: 2px solid rgb(189, 92, 92);
+  border: 2px solid #93B1A6;
+  box-shadow: 0 0 10px;
   outline: none;
-  cursor: pointer;
 }
 .logo{
   font-weight: bold;
   font-size: 1.5rem;
   margin:20px 10px;
+  color: #040D12;
+  /* font-family: 'Smooch', cursive; */
+
 }
 .dropdown-menu{
   list-style: none;
@@ -67,16 +73,32 @@ nav{
 .geners{
   cursor: pointer;
   margin-top: 25px;
+  margin-right: 15px;
+  font-weight: bold;
 
 }
 .geners:hover{
-  color: blue;
+  color:  #93B1A6;
 }
 .geners ul li{
   color: black;
+  margin-top: 8px;
+  font-weight: bold;
+
+}
+.geners ul{
+  margin-top: 10px ;
+  background-color: #93b1a6a0;
+  width: 110px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 5px;
+  
+  
+
 }
 .geners ul li:hover{
-  color: red;
+  color: #183d3d97;
 }
 .genres-icon{
   cursor: pointer;
@@ -85,24 +107,45 @@ nav{
 .movies{
   cursor: pointer;
   margin-top: 25px;
+  margin-right: 15px;
+  font-weight: bold;
+
+
 
 }
 .movies:hover{
-  color:blue;
+  color: #93B1A6;
 }
 .movies ul li{
   color: black;
+  margin-top: 2px;
+  font-weight: bold;
+
+  
 }
+.movies ul{
+  margin-top: 10px;
+  background-color: #93b1a6a0;
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 5px;
+  font-weight: bold;
+
+}
+
 .movies ul li:hover{
-  color: red;
+  color: #183d3d97;
 }
 .actors:hover{
-  color: blue;
+  color: #93B1A6;
 
 }
 .actors{
-  margin-right: 50px;
+  margin-right: 70px;
   margin-top: 25px;
+ font-weight: bold;
+
 }
 .searchItem{
   margin-top: 50px;
@@ -112,6 +155,7 @@ nav{
   width: 200px;
   height: 300px;
   margin-top: 10px;
+ 
 
 }
 .movie-search{
@@ -120,7 +164,44 @@ nav{
 .genres-icon{
   margin-left: 5px;
 }
-.dropdown-menu{
+
+.gma{
+  display: flex;
+}
+.logo-search{
+  display: flex;
+}
+.tv-icon{
+  margin-left: 3px;
+}
+select{
   background-color: transparent;
+}
+
+img{
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+}
+.moviee{
+  display: flex;
+  margin:10px 20px;
+}
+.movie-title{
+  margin:20px ;
+  font-weight: bold;
+  color: #040D12;
 
 }
+.actor-name{
+  margin:20px ;
+  font-weight: bold;
+  color: #040D12;
+
+}
+.actorr{
+  display: flex;
+  margin:10px 20px;
+}
+
+

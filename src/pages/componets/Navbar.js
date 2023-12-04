@@ -4,7 +4,9 @@ import Geners from './Geners'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faTv } from '@fortawesome/free-solid-svg-icons';
 import Search from './Search'
+import MoviesDropdown from './MoviesDropdown';
 
 
 const Navbar = () => {
@@ -22,15 +24,21 @@ const Navbar = () => {
 
   return (
     <>
-    <nav >
+    <nav>
+
+        <div className='logo-search'>
         <div className='logo'>
         <Link href='/' >
-            Re:movie
+            Re:Movie
         </Link>
+        <FontAwesomeIcon icon={faTv} className='tv-icon' />
         </div>
 
+
         <Search className='search'/>
-       
+        </div>
+
+       <div className='gma'>
         <div onClick={handleCLick} className='geners'>
             Genres
         <FontAwesomeIcon icon={faAngleDown} className='genres-icon'/>
@@ -41,23 +49,8 @@ const Navbar = () => {
             Movies
         <FontAwesomeIcon icon={faAngleDown} className='genres-icon' />
         {click2 &&(
-         <ul className="dropdown-menu">
-         <li>
-            <Link href='/' >Top rated</Link>
-         </li>
-         <li>
-            <Link href='/' >Popular</Link>
-         </li>
-         <li>
-            <Link href='/' >Latest</Link>
-         </li>
-         <li>
-            <Link href='/' >Now playing</Link>
-         </li>
-         <li>
-            <Link href='/' >Upcoming</Link>
-         </li>
-       </ul>
+            
+        <MoviesDropdown />
         )}
         </div>
 
@@ -65,6 +58,7 @@ const Navbar = () => {
         <Link href='./actors' >
             Actors
         </Link>
+        </div>
         </div>
     </nav>
 
