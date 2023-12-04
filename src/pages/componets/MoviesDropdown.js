@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MoviesDropdown({ options }) {
+function MoviesDropdown() {
   
   return (
     <div>
