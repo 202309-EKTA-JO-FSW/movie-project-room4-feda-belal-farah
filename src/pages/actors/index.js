@@ -26,32 +26,31 @@ const options = {
 
 //** Diplay Populer People using Tailwind CSS  */
    return (
-    <div className="container-ActorDetails">
-    {popularPeople.map(person => (
-     //   <link key={person.id} >
-     <div className="flex flex-row rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
-            <div key={person.id}
-            className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg">
-            <ActorImages personId={person.id} />
-            </div>
-            <div className="flex flex-col justify-start p-6">
-            <Link href={`/actors/${person.id}`}
-            className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-            <strong>
-            {person.name}
-            </strong>
-            </Link >
-            <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200" >
-            <p>Poularity : {person.popularity}</p>  
-            </p>
-            <p className="text-xs text-neutral-500 dark:text-neutral-300">
-            <p>known_for : {person.known_for_department} </p>  
-            </p>
-            </div>
-            
-     </div>
-   //  </link>
-      ))}
-</div>
+
+    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-6">Popular People</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {popularPeople.map((person) => (
+          <div key={person.id} className="bg-gray-800 rounded-lg shadow-md p-4">
+         <Link href={`/actors/${person.id}`}>
+
+            <img
+              src={ `https://image.tmdb.org/t/p/original${person.profile_path}` }
+              alt={`${person.name} profile`}
+              className="w-full rounded-lg mb-4"
+            />
+         </Link>
+         <Link href={`/actors/${person.id}`}>
+
+            <h2 className="text-xl font-semibold mb-2">{person.name}</h2>
+            </Link>
+            <p className="text-gray-300">{person.knownFor}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
       );
     };
