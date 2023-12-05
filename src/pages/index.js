@@ -1,5 +1,10 @@
-import react from "react"
-import {ReactDOM} from 'react'
-import App from './App'
+import Navbar from "./componets/Navbar"
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+export default function Home() {
+  return (
+    <main>
+      <Navbar  />
+      
+    </main>
+  )
+}

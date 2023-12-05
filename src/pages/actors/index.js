@@ -14,13 +14,13 @@ const options = {
     }
   };
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=2', options)
+    fetch('https://api.themoviedb.org/3/person/popular?language=en-US&page=1', options)
       .then((res) => res.json())
       .then((data) => {
         setPopularPeople(data.results);
       })
       .catch(error => {
-        console.error('Error fetching image path:', error);
+        console.error('Error fetching  popularPeople path:', error);
       });
   }, [])
 
@@ -28,18 +28,19 @@ const options = {
    return (
     <div className="container-ActorDetails">
     {popularPeople.map(person => (
+     //   <link key={person.id} >
      <div className="flex flex-row rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 md:max-w-xl md:flex-row">
             <div key={person.id}
             className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg">
             <ActorImages personId={person.id} />
             </div>
             <div className="flex flex-col justify-start p-6">
-            <h5
+            <Link href={`/actors/${person.id}`}
             className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
             <strong>
             {person.name}
             </strong>
-            </h5>
+            </Link >
             <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200" >
             <p>Poularity : {person.popularity}</p>  
             </p>
@@ -49,6 +50,7 @@ const options = {
             </div>
             
      </div>
+   //  </link>
       ))}
 </div>
       );
