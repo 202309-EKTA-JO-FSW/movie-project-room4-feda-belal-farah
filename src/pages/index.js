@@ -1,9 +1,12 @@
-
+import Image from "next/image"
+import Homepage from "@/components/Homepage"
+import Navbar from "@/components/Navbar/Navbar"
 
 export default function Home() {
   return (
     <main>
-     
+      <Navbar  />
+      <Homepage movieDataToday={movieDataToday} movieDataWeek={movieDataWeek} />
 
 
     </main>
