@@ -64,7 +64,7 @@ export async function getStaticProps ({params}) {
   const shortDetails = biography.substring(0, 100); // Displaying the first 100 characters
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-[#040D12] text-white min-h-screen">
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col lg:flex-row items-center lg:justify-start">
         <div className="lg:w-1/3">
@@ -79,7 +79,7 @@ export async function getStaticProps ({params}) {
 
           <div className="bg-gray-800 rounded-lg p-4 shadow-md">
             <h2 className="text-2xl font-semibold mb-2">Biography</h2>
-            <p className="text-gray-300">{biography}</p>
+            <p className="text-gray-300 ">{biography}</p>
           </div>
         </div>
       </div>

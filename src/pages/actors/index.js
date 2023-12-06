@@ -26,31 +26,41 @@ const options = {
 
 //** Diplay Populer People using Tailwind CSS  */
    return (
+    
+    <div className="bg-inherit flex flex-col gap-4 justify-center items-start bg-[#040D12]">
+    <h1 className="border-2 rounded-[10px] mx-[8%] mt-12 border-[#93b1a6] shadow-[#93b1a6] shadow-[0_0_50px_-15px] w-fit p-3 text-3xl font-bold text-[#93b1a6]">
+    Popular People
+          </h1>
+	<div className= " grid grid-cols-5 gap-14 px-[10%] py-20 movie-cover  ">
 
-    <div className="bg-gray-900 text-white min-h-screen">
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6">Popular People</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {popularPeople.map((person) => (
-          <div key={person.id} className="bg-gray-800 rounded-lg shadow-md p-4">
-         <Link href={`/actors/${person.id}`}>
+          <div key={person.id} >
 
-            <img
-              src={ `https://image.tmdb.org/t/p/original${person.profile_path}` }
-              alt={`${person.name} profile`}
-              className="w-full rounded-lg mb-4"
-            />
-         </Link>
-         <Link href={`/actors/${person.id}`}>
+          <Link href={`/actors/${person.id}`}>
 
-            <h2 className="text-xl font-semibold mb-2">{person.name}</h2>
-            </Link>
-            <p className="text-gray-300">{person.knownFor}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-  
-      );
-    };
+          <img  
+            src={ `https://image.tmdb.org/t/p/original${person.profile_path}` }
+            alt={`${person.name} profile`}
+            className="w-full rounded-lg mb-4 hover:shadow-[0px_0px_22px_#93B1A6] transition-all duration-300 rounded-lg"
+          />
+       </Link>
+
+       <section className="flex flex-col gap-[2px] place-content-between w-[100%]">
+         <Link href={`/actors/${person.id}`}>
+          <h2 className="movie-title font-bold text-xl text-[#93b1a6] max-w-[220px] h-auto">
+            {person.name}
+          </h2>
+          <figcaption className="release-date italic text-gray-500  w-auto">
+            {person.knownFor}
+          </figcaption>
+        </Link>
+      </section>
+         </div>
+                 ))}
+
+         </div>
+         </div>
+
+
+);
+};
