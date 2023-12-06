@@ -75,9 +75,9 @@ export async function getStaticProps ({params}) {
         </div>
         <div className="lg:w-2/3 lg:pl-8 mt-6 lg:mt-0">
           <h1 className="text-4xl font-bold mb-4">{actor.name}</h1>
-          <h1 className="text-1xl  mb-4">{isMaleFemal(actor.gender)}  Date Of Birth : {actor.birthday} </h1>
+          <h1 className="text-1xl  mb-4">{isMaleFemal(actor.gender)} <br/> Date Of Birth : {actor.birthday} </h1>
 
-          <div className="bg-gray-800 rounded-lg p-4 shadow-md">
+          <div className="bg-[#040D12] rounded-lg p-4 shadow-md">
             <h2 className="text-2xl font-semibold mb-2">Biography</h2>
             <p className="text-gray-300 ">{biography}</p>
           </div>

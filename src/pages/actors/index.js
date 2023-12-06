@@ -27,11 +27,11 @@ const options = {
 //** Diplay Populer People using Tailwind CSS  */
    return (
     
-    <div className="bg-inherit flex flex-col gap-4 justify-center items-start bg-[#040D12]">
+    <div className="flex flex-col gap-4 justify-center items-start bg-[#040D12]">
     <h1 className="border-2 rounded-[10px] mx-[8%] mt-12 border-[#93b1a6] shadow-[#93b1a6] shadow-[0_0_50px_-15px] w-fit p-3 text-3xl font-bold text-[#93b1a6]">
     Popular People
           </h1>
-	<div className= " grid grid-cols-5 gap-14 px-[10%] py-20 movie-cover  ">
+	<div className= " grid grid-cols-5 gap-14 px-[10%] my-20 movie-cover bg-[#040D12] ">
 
         {popularPeople.map((person) => (
           <div key={person.id} >
