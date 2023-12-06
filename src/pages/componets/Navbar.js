@@ -8,7 +8,6 @@ import { faTv } from '@fortawesome/free-solid-svg-icons';
 import Search from './Search'
 import MoviesDropdown from './MoviesDropdown';
 
-
 const Navbar = () => {
 
     const[click, setClick] = useState(false);
@@ -24,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav>
+    <nav className='nav'>
 
         <div className='logo-search'>
         <div className='logo'>
