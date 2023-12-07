@@ -20,7 +20,7 @@ function Movies({ movieData, trailerData, credits, relatedMovies }) {
     return movieData.production_companies.map((comp, ind) => {
       if (ind < movieData.production_companies.length - 1)
         return (
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1" key={comp.name}>
             {comp.name}{" "}
             {comp.logo_path && (
               <img
@@ -34,7 +34,7 @@ function Movies({ movieData, trailerData, credits, relatedMovies }) {
         )
       else
         return (
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1" key={comp.name}>
             {comp.name}{" "}
             {comp.logo_path && (
               <img
@@ -59,7 +59,7 @@ function Movies({ movieData, trailerData, credits, relatedMovies }) {
     return (
       <ul className="grid grid-cols-3 gap-4 my-10">
         {credits.cast.slice(0, 6).map((actor) => (
-          <Link href={`/actors/${actor.id}`}>
+          <Link href={`/actors/${actor.id}`} key={actor.id}>
             <li className="flex flex-col items-center gap-2 mb-[60px] ">
               {actor.profile_path && (
                 <img
@@ -80,8 +80,8 @@ function Movies({ movieData, trailerData, credits, relatedMovies }) {
 
   function relatedMoviesList() {
     return relatedMovies.slice(0, 6).map((movie) => (
-      <li className="scale-90">
-        <MovieCard movie={movie} />
+      <li className="scale-90" key={movie.id}>
+        <MovieCard key={movie.id} movie={movie} />
       </li>
     ))
   }
