@@ -1,6 +1,5 @@
 import Homepage from "../components/Homepage"
 export default function Home({ movieDataToday, movieDataWeek }) {
-  console.log(movieDataToday)
   return (
     <Homepage movieDataToday={movieDataToday} movieDataWeek={movieDataWeek} />
   )

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@material-tailwind/react
+@material-tailwind /react
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -61,8 +61,8 @@ nav.nav {
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
-  margin:20px 10px;
-  color: #040D12;
+  margin: 20px 10px;
+  color: #040d12;
 
   margin: 20px 10px;
   color: #040d12;
@@ -120,7 +120,7 @@ nav.nav {
 .movies ul {
   margin-top: 10px;
   background-color: #93b1a6a0;
-  width: 100px;
+  width: 110px;
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0 0 5px;
@@ -168,7 +168,6 @@ select {
 }
 
 .movie-poster-search {
-
   width: 150px;
   height: 200px;
   border-radius: 10px;
@@ -193,53 +192,45 @@ select {
 }
 
 .footer {
-  background-color: #5C8374;
+  background-color: #5c8374;
   padding: 20px;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
 
 .footer h1 {
-  color: #040D12;
-  font-size: 1.2rem;  
+  color: #040d12;
+  font-size: 1.2rem;
   font-weight: bold;
-
 }
 
 .footer ul {
   list-style: none;
   padding: 0;
-  margin: 0; 
+  margin: 0;
 }
 
 .footer ul li {
   margin: 0 20px;
-  
 }
 
 .footer ul li a {
   text-decoration: none;
-  color: #040D12;
+  color: #040d12;
   margin: 0 5px;
   font-size: 15px;
 }
 
-.hoverr:hover{
-  color: #93B1A6;
+.hoverr:hover {
+  color: #93b1a6;
 }
-.footerr{
+.footerr {
   display: flex;
   justify-content: center;
 }
 
-.icon{
+.icon {
   cursor: pointer;
 }
-
-
-
-
-
-

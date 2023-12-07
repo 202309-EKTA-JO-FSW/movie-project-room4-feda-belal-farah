@@ -13,7 +13,6 @@ export async function dataFetching(context) {
         return "upcoming"
     }
   }
-  console.log(pageName())
   const options = {
     method: "GET",
     headers: {

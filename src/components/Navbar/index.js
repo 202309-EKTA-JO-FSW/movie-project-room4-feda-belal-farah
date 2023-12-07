@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         <div className="actors">
-          <Link href="./actors">Actors</Link>
+          <Link href="/actors">Actors</Link>
         </div>
       </div>
     </nav>
